@@ -4,8 +4,26 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
+    "start:reset": "watchman watch-del-all && react-native start --reset-cache",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "run:android": "react-native run-android",
+    "run:android:release": "react-native run-android --variant=release",
+    "bundle:android": "cd android && ./gradlew bundleRelease",
+    "uninstall:android": "adb uninstall com.reactnativeapp",
+    "reverse": "adb reverse tcp:8081 tcp:8081",
+    "log:android": "react-native log-android",
+    "keystore:debug": "cd android/app && keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000",
+    "keystore:release": "cd android/app && $ keytool -genkeypair -v -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000",
+    "run:ios": "yarn pod && react-native run-ios",
+    "run:iosx": "react-native run-ios --simulator='iPhone X'",
+    "run:ios8": "react-native run-ios --simulator='iPhone 8'",
+    "run:ios5s": "react-native run-ios --simulator='iPhone 5s'",
+    "xcode": "open ios/ReactNativeApp.xcodeproj",
+    "xcworkspace": "open ios/ReactNativeApp.xcworkspace",
+    "pod": "cd ios && pod install",
+    "prepublish": "",
+    "postinstall": ""
   },
   "dependencies": {
     "react": "16.8.6",
