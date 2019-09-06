@@ -23,15 +23,20 @@
     "xcworkspace": "open ios/ReactNativeApp.xcworkspace",
     "pod": "cd ios && pod install",
     "prepublish": "",
-    "postinstall": ""
+    "postinstall": "",
+    "setIcon": "react-native set-icon --path resources/icon.png",
+    "setSplash": "react-native set-splash --path resources/splash.png --background 'white'",
+    "code": "code ./"
   },
   "dependencies": {
     "react": "16.8.6",
-    "react-native": "0.60.5"
+    "react-native": "0.60.5",
+    "react-native-splash-screen": "^3.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/runtime": "^7.5.5",
+    "@bam.tech/react-native-make": "^1.0.1-rc2",
     "@react-native-community/eslint-config": "^0.0.5",
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
