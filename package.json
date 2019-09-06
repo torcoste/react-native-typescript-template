@@ -15,6 +15,7 @@
     "log:android": "react-native log-android",
     "keystore:debug": "cd android/app && keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000",
     "keystore:release": "cd android/app && $ keytool -genkeypair -v -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000",
+    "androidStudio": "open -a '/Applications/Android Studio.app' ./android",
     "run:ios": "yarn pod && react-native run-ios",
     "run:iosx": "react-native run-ios --simulator='iPhone X'",
     "run:ios8": "react-native run-ios --simulator='iPhone 8'",
@@ -23,7 +24,9 @@
     "xcworkspace": "open ios/ReactNativeApp.xcworkspace",
     "pod": "cd ios && pod install",
     "prepublish": "",
-    "postinstall": ""
+    "postinstall": "",
+    "setSplash": "yo rn-toolbox:assets --splash resources/splash.png --android",
+    "setIcon": "yo rn-toolbox:assets --icon resources/icon.png --ios"
   },
   "dependencies": {
     "react": "16.8.6",
